@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { FaBars } from 'react-icons/fa';
 import { FaXmark } from 'react-icons/fa6';
 import { BrowserRouter, Link } from 'react-router-dom';
+import logo from '../assets/rewired_2_logo.png'
 
 
 function Navbar() {
@@ -17,9 +18,12 @@ function Navbar() {
   }, []);
 
   return (
-    <div className='w-full md:w-7/8 flex justify-between md:mr-11 mr-15'>
-      {isDesktop ? <LargeNavbar /> : <SmallNavbar />}
-      <div className="absolute left-0 top-1/12 bg-red/50 h-[1px] w-full"></div>
+    <div className='relative w-full'>
+      <div className="absolute left-0 top-[95%] bg-red/50 h-[1px] w-screen z-0 "></div>
+
+      <div className='w-full md:w-7/8 flex justify-between right-8 md:right-0 md:ml-24 relative z-10'>
+        {isDesktop ? <LargeNavbar /> : <SmallNavbar />}
+      </div>
     </div>
   )
 }
@@ -28,7 +32,7 @@ function LargeNavbar() {
   return (
     <BrowserRouter>
       <div>
-        <img src='src/assets/rewired_2_logo.png' className='m-2 scale-70'></img>
+        <img src={logo} className='m-2 scale-70'></img>
       </div>
       <nav className="justify-around items-center p-4 hidden md:flex">
         <ul className="flex gap-x-6 text-xl font-bold mr-2">
@@ -69,7 +73,7 @@ function SmallNavbar() {
   return (
     <div className="md:hidden flex justify-between items-center p-4 gap-x-12">
       <div>
-        <img src='src/assets/rewired_2_logo.png' className='m-2 scale-65'></img>
+        <img src={logo} className='m-2 scale-65'></img>
       </div>
       <div className="text-2xl" onClick={() => {
         setNavOpen(true);
@@ -85,7 +89,7 @@ function SmallNavbar() {
             <FaXmark />
           </button>
           <div>
-            <img src='src/assets/rewired_2_logo.png' className='m-2 scale-70'></img>
+            <img src={logo} className='m-2 scale-70'></img>
           </div>
           <ul className="flex flex-col gap-y-4 text-center text-xl font-medium">
             <li>
