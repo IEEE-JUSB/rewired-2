@@ -18,7 +18,7 @@ function Navbar() {
 
   return (
     <div className="relative w-full">
-      <div className="absolute left-0 top-[95%] bg-red/50 h-[1px] w-screen z-0 "></div>
+      <div className="absolute left-0 top-[95%] bg-red/50 h-[1px] w-full z-0 "></div>
 
       <div className="w-full md:w-7/8 flex justify-between right-8 md:right-0 md:ml-24 relative z-10">
         {isDesktop ? <LargeNavbar /> : <SmallNavbar />}
