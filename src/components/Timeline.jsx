@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function Timeline() {
-  return (
-    <div>Timeline</div>
-  )
+  return <div>Timeline</div>;
 }
 
-export default Timeline
+export default Timeline;
