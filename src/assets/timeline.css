@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #0a0a0a;
+    color: #ffffff;
+    font-family: "Courier New", monospace;
+    overflow-x: hidden;
+    position: relative;
+    width: 70%;
+    margin-left: 15%;
+}
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+        rgba(255, 0, 60, 0.1) 1px,
+        transparent 1px
+    ),
+    linear-gradient(90deg, rgba(255, 0, 60, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    pointer-events: none;
+    z-index: -1;
+}
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    gap: 40px;
+    grid-template-areas:
+    "header header header"
+    "sidebar main services"
+    "footer footer footer";
+}
+.sidebar {
+    grid-area: sidebar;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.schedule {
+    border: 2px solid #ff003c;
+    padding: 20px;
+    background: rgba(255, 0, 60, 0.05);
+}
+.schedule-item {
+    display: flex;
+    gap: 20px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 0, 60, 0.3);
+}
+.schedule-item:last-child {
+    border-bottom: none;
+}
+.time {
+    color: #ff003c;
+    font-weight: bold;
+}
+.we-do {
+    text-align: center;
+    padding: 40px 20px;
+    border: 2px solid #ff003c;
+    position: relative;
+}
+.we-do::before,
+.we-do::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ff003c;
+}
+.we-do::before {
+    top: 10px;
+    left: 10px;
+    border-right: none;
+    border-bottom: none;
+}
+.we-do::after {
+    bottom: 10px;
+    right: 10px;
+    border-left: none;
+    border-top: none;
+}
+.main-content {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+.glitch-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    max-width: 400px;
+}
+.services {
+    grid-area: services;
+}
+.service-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 25px 0;
+    border-bottom: 1px solid rgba(255, 0, 60, 0.3);
+    transition: all 0.3s ease;
+}
+.service-item:hover {
+    background: rgba(255, 0, 60, 0.1);
+    transform: translateX(10px);
+}
+.service-number {
+    color: #ff003c;
+    font-size: 18px;
+    font-weight: bold;
+    min-width: 30px;
+}
+.service-icon {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #ff003c;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.service-icon::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ff003c;
+    border-radius: 50%;
+    background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 2px,
+    #ff003c 2px,
+    #ff003c 4px
+    );
+}
+.footer {
+    grid-area: footer;
+    border-top: 2px solid #ff003c;
+    padding-top: 20px;
+}
+.clients-section h3 {
+    color: #ff003c;
+    margin-bottom: 20px;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+.client-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #ff003c;
+    background: rgba(255, 0, 60, 0.05);
+    transition: all 0.3s ease;
+}
+.client-item:hover {
+    background: rgba(255, 0, 60, 0.15);
+    transform: translateX(5px);
+}
+.client-name {
+    font-weight: bold;
+    font-size: 18px;
+}
+.client-type {
+    color: #ff003c;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.client-arrow {
+    color: #ff003c;
+    font-size: 20px;
+}
+@media (max-width: 1024px) {
+    .container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "header"
+        "main"
+        "services"
+        "sidebar"
+        "footer";
+    gap: 30px;
+    }
+}
