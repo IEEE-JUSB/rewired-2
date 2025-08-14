@@ -13,29 +13,33 @@ function Footer() {
   return (
     <>
       <div className="bg-black text-red-500 w-full p-10 flex flex-col md:flex-row items-center md:items-start justify-center md:justify-around text-xl space-y-10 md:space-y-0">
-
-
-
-        
         <div className="w-auto mb-20">
           <div className="font-extrabold text-center mb-2">About JUSB</div>
           <div className="w-80">
-            The Jadavpur University Student Branch, founded in 2010, belongs to the Kolkata section. We are a group of enthusiastic students promoting innovative ideas within and outside the campus.
+            The Jadavpur University Student Branch, founded in 2010, belongs to the Kolkata section.
+            We are a group of enthusiastic students promoting innovative ideas within and outside
+            the campus.
           </div>
         </div>
 
-       
         <div className="w-auto ">
           <div className="font-extrabold mb-2 pl-2">Quick Links</div>
           <div className="text-center">
-            <a href="/" className="hover:text-red-400 transition">Home</a><br />
-            
-            <a href="/timeline" className="hover:text-red-400 transition">Timeline</a><br />
-            <a href="/faqs" className="hover:text-red-400 transition">FAQs</a>
+            <a href="/" className="hover:text-red-400 transition">
+              Home
+            </a>
+            <br />
+
+            <a href="/timeline" className="hover:text-red-400 transition">
+              Timeline
+            </a>
+            <br />
+            <a href="/faqs" className="hover:text-red-400 transition">
+              FAQs
+            </a>
           </div>
         </div>
 
-        
         <div className="w-auto px-6 ">
           <div className="font-extrabold mb-2 text-center">Contact Us</div>
           <div className="flex items-center gap-2">
@@ -55,7 +59,6 @@ function Footer() {
           </div>
         </div>
 
-        
         <div className="w-auto ml-5">
           <div className="font-extrabold mb-2">Follow us on Socials</div>
           <div className="flex gap-4 items-center text-2xl">
@@ -95,12 +98,9 @@ function Footer() {
         </div>
       </div>
 
-      
       <div className=" border-t  flex w-full justify-center border-red-500 px-7 bg-black">
         <div className="flex flex-col items-center space-y-1">
-          <p className="text-red-500 text-lg font-Poppins p-3">
-            Made with &#10084; by IEEE JUSB
-          </p>
+          <p className="text-red-500 text-lg font-Poppins p-3">Made with &#10084; by IEEE JUSB</p>
         </div>
       </div>
     </>
