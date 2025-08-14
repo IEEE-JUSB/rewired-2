@@ -6,3 +6,24 @@
   --color-background: #040406;
   --font-spaceGrotesk: "Space Grotesk";
 }
+
+@layer components {
+  @media (max-width: 620px) {
+    .flipclock {
+      --fcc-spacing: 4px;
+      --fcc-digit-block-width: 30px;
+      --fcc-digit-block-height: 45px;
+      --fcc-digit-block-radius: 3.75px;
+      --fcc-digit-block-spacing: 3.75px;
+      --fcc-digit-font-size: 22.5px;
+      --fcc-label-font-size: 12px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .flipclock {
+      --fcc-spacing: 2px;
+      --fcc-digit-block-width: 25px;
+    }
+  }
+}
