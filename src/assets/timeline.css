@@ -1,38 +1,7 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body {
-    background: #0a0a0a;
-    color: #ffffff;
-    font-family: "Courier New", monospace;
-    overflow-x: hidden;
-    position: relative;
-    width: 70%;
-    margin-left: 15%;
-}
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(
-        rgba(255, 0, 60, 0.1) 1px,
-        transparent 1px
-    ),
-    linear-gradient(90deg, rgba(255, 0, 60, 0.1) 1px, transparent 1px);
-    background-size: 50px 50px;
-    pointer-events: none;
-    z-index: -1;
-}
+
 .container {
-    max-width: 1400px;
-    margin: 0 auto;
+    max-width: 1200px;
     padding: 20px;
-    min-height: 100vh;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: auto 1fr auto;
@@ -62,36 +31,6 @@ body::before {
 .schedule-item:last-child {
     border-bottom: none;
 }
-.time {
-    color: #ff003c;
-    font-weight: bold;
-}
-.we-do {
-    text-align: center;
-    padding: 40px 20px;
-    border: 2px solid #ff003c;
-    position: relative;
-}
-.we-do::before,
-.we-do::after {
-    content: "";
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    border: 2px solid #ff003c;
-}
-.we-do::before {
-    top: 10px;
-    left: 10px;
-    border-right: none;
-    border-bottom: none;
-}
-.we-do::after {
-    bottom: 10px;
-    right: 10px;
-    border-left: none;
-    border-top: none;
-}
 .main-content {
     grid-area: main;
     display: flex;
@@ -99,13 +38,6 @@ body::before {
     justify-content: center;
     align-items: center;
     gap: 40px;
-}
-.glitch-bars {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    width: 100%;
-    max-width: 400px;
 }
 .services {
     grid-area: services;
@@ -137,20 +69,6 @@ body::before {
     align-items: center;
     justify-content: center;
     position: relative;
-}
-.service-icon::before {
-    content: "";
-    width: 20px;
-    height: 20px;
-    border: 1px solid #ff003c;
-    border-radius: 50%;
-    background: repeating-linear-gradient(
-    45deg,
-    transparent,
-    transparent 2px,
-    #ff003c 2px,
-    #ff003c 4px
-    );
 }
 .footer {
     grid-area: footer;

@@ -1,6 +1,6 @@
 import React from "react";
 import "../assets/timeline.css";
-import timeline from "../assets/timeline.svg";
+import timeline from "../assets/text.svg";
 const Timeline = () => {
 
   return (
@@ -22,20 +22,22 @@ const Timeline = () => {
             </div>
           </div>
 
-          <div className="we-do">
-            <div>WE DO</div>
-            <div>WEB3</div>
-          </div>
         </aside>
 
         <main className="main-content">
-          <div className="glitch-bars">
-            <img
+          {/* <div className="glitch-bars"> */}
+            {/* <img
               src={timeline}
               alt=""
               style={{ width: "100%", height: "400px", maxWidth: "400px" }}
-            />
+              className="rotate-90"
+            /> */}
+            <div className="writing-mode-vertical-lr rotate-90 flex-shrink-0">
+            <h1 className="text-7xl sm:text-7xl font-extrabold tracking-widest whitespace-nowrap">
+              TIMELINE 
+            </h1>
           </div>
+          {/* </div> */}
         </main>
 
         <section className="services">
@@ -64,7 +66,7 @@ const Timeline = () => {
 
         <footer className="footer">
           <div className="clients-section">
-            <h3>CLIENTS / PROJECTS</h3>
+            {/* <h3>CLIENTS / PROJECTS</h3> */}
             <div className="client-item">
               <div>
                 <div className="client-name">VAN ECK</div>
