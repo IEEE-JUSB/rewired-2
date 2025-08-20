@@ -4,33 +4,33 @@ import Card from "./Cards";
 function Speakers() {
   const speakers = [
     {
-      image: "/don.webp",
-      name: "Krishna",
-      designation: "Chief in Charge",
-      linkedin: "https://www.google.com",
+      image: "/Placeholder_Person.jpg",
+      name: "Coming Soon",
+      designation: "Coming Soon",
+      linkedin: "https://ieee-jaduniv.in",
     },
     {
-      image: "/don.webp",
-      name: "Krishna",
-      designation: "Chief in Charge",
-      linkedin: "https://www.google.com",
+      image: "/Placeholder_Person.jpg",
+      name: "Coming Soon",
+      designation: "Coming Soon",
+      linkedin: "https://ieee-jaduniv.in",
     },
     {
-      image: "/don.webp",
-      name: "Krishna",
-      designation: "Chief in Charge",
-      linkedin: "https://www.google.com",
+      image: "/Placeholder_Person.jpg",
+      name: "Coming Soon",
+      designation: "Coming Soon",
+      linkedin: "https://ieee-jaduniv.in",
     },
 
     // Add more speakers as needed...
   ];
 
   return (
-    <div>
-      <h1 className="w-full text-center text-6xl font-extrabold mt-3">SPEAKERS</h1>
+    <div id="speakers">
+      <h1 className="w-full text-center text-5xl sm:text-7xl font-extrabold mt-3">SPEAKERS</h1>
 
       <div className="flex justify-center items-center min-h-screen w-full p-4  box-border">
-        <div className="grid gap-4 w-full max-w-7xl sm:grid-cols-2 lg:grid-cols-3 justify-items-center">
+        <div className="grid gap-8 w-[90%] max-w-7xl sm:grid-cols-3 justify-items-center">
           {speakers.map((speaker, idx) => (
             <Card
               key={idx}

@@ -12,9 +12,9 @@ import {
 function Footer() {
   return (
     <>
-      <div className="bg-black text-red-500 w-full p-10 flex flex-col md:flex-row items-center md:items-start justify-center md:justify-around text-xl space-y-10 md:space-y-0">
-        <div className="w-auto mb-20">
-          <div className="font-extrabold text-center mb-2">About JUSB</div>
+      <div className="text-red w-full mt-6 p-8 flex flex-col md:flex-row items-center md:items-start justify-center md:justify-around space-y-10 md:space-y-0" id="footer">
+        <div className="w-auto hidden sm:block">
+          <div className="font-extrabold text-lg text-center">About JUSB</div>
           <div className="w-80">
             The Jadavpur University Student Branch, founded in 2010, belongs to the Kolkata section.
             We are a group of enthusiastic students promoting innovative ideas within and outside
@@ -22,26 +22,26 @@ function Footer() {
           </div>
         </div>
 
-        <div className="w-auto ">
-          <div className="font-extrabold mb-2 pl-2">Quick Links</div>
+        <div className="w-auto">
+          <div className="font-extrabold mb-2 pl-2 text-lg">Quick Links</div>
           <div className="text-center">
-            <a href="/" className="hover:text-red-400 transition">
-              Home
+            <a href="/#about" className="hover:text-red-400 transition">
+              About
             </a>
             <br />
 
-            <a href="/timeline" className="hover:text-red-400 transition">
+            <a href="/#timeline" className="hover:text-red-400 transition">
               Timeline
             </a>
             <br />
-            <a href="/faqs" className="hover:text-red-400 transition">
-              FAQs
+            <a href="/#speakers" className="hover:text-red-400 transition">
+              Speakers
             </a>
           </div>
         </div>
 
         <div className="w-auto px-6 ">
-          <div className="font-extrabold mb-2 text-center">Contact Us</div>
+          <div className="font-extrabold mb-2 text-center text-lg">Contact Us</div>
           <div className="flex items-center gap-2">
             <FaEnvelope />
             <a href="mailto:jaduniv.ieee@gmail.com">jaduniv.ieee@gmail.com</a>
@@ -59,8 +59,8 @@ function Footer() {
           </div>
         </div>
 
-        <div className="w-auto ml-5">
-          <div className="font-extrabold mb-2">Follow us on Socials</div>
+        <div className="w-auto ml-5 flex flex-col items-center">
+          <div className="font-extrabold mb-2 text-lg">Follow us on Socials</div>
           <div className="flex gap-4 items-center text-2xl">
             <a
               href="https://www.instagram.com/_ieeeju/"
@@ -71,7 +71,7 @@ function Footer() {
               <FaInstagram />
             </a>
             <a
-              href="https://x.com/IeeeJadavpur"
+              href="https://x.com/_ieeeju"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Twitter/X"
@@ -98,9 +98,9 @@ function Footer() {
         </div>
       </div>
 
-      <div className=" border-t  flex w-full justify-center border-red-500 px-7 bg-black">
+      <div className="border-t  flex w-full justify-center border-red/50 px-7">
         <div className="flex flex-col items-center space-y-1">
-          <p className="text-red-500 text-lg font-Poppins p-3">Made with &#10084; by IEEE JUSB</p>
+          <p className="text-red p-3">Made with &#10084; by IEEE JUSB</p>
         </div>
       </div>
     </>
