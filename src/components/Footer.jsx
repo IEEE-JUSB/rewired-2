@@ -29,13 +29,16 @@ function Footer() {
               About
             </a>
             <br />
-
             <a href="/#timeline" className="hover:text-red-400 transition">
               Timeline
             </a>
             <br />
             <a href="/#speakers" className="hover:text-red-400 transition">
               Speakers
+            </a>
+            <br />
+            <a href="/#faq" className="hover:text-red-400 transition">
+              FAQ
             </a>
           </div>
         </div>

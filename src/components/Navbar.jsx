@@ -62,6 +62,14 @@ function LargeNavbar() {
           </li>
           <li className="relative top-2">
             <a
+              href="/#faq"
+              className="text-red-700 hover:text-red hover:border-red border-b-4 pb-4 border-transparent"
+            >
+              FAQ
+            </a>
+          </li>
+          <li className="relative top-2">
+            <a
               href="/#footer"
               className="text-red-700 hover:text-red hover:border-red border-b-4 pb-4 border-transparent"
             >

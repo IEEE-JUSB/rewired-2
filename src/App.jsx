@@ -4,6 +4,7 @@ import About from "/src/components/About";
 import Timeline from "/src/components/Timeline";
 import Speakers from "/src/components/Speakers";
 import Footer from "/src/components/Footer";
+import FAQ from "/src/components/FAQ"
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <About />
       <Timeline />
       <Speakers />
+      <FAQ />
       <Footer />
     </div>
   );
