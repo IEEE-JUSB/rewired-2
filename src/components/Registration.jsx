@@ -119,8 +119,8 @@ const Registration = () => {
           </p>
         </div>
 
-        <div className="bg-background border-2 border-red/40 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 shadow-lg mx-2 sm:mx-0">
-          <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6" noValidate>
+        <div className="bg-background border-2 border-red/40 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 shadow-lg mx-2 sm:mx-0 custom-scrollbar">
+          <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6 form-scroll" noValidate>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
               <div>
                 <label htmlFor="name" className="block text-red font-semibold mb-2 text-base sm:text-lg">Full Name *</label>
