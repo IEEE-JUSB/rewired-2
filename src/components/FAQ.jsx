@@ -67,7 +67,7 @@ const FAQ = () => {
     return (
         <div id="faq" className="w-full flex flex-col items-center mt-6">
             <h1 className="w-full text-center text-4xl md:text-6xl lg:text-7xl font-extrabold mt-5">Frequently Asked Questions</h1>
-            <div className="w-50% md:w-full max-w-5xl flex flex-col items-center my-30 px-10 ">
+            <div className="w-50% md:w-full max-w-5xl flex flex-col items-center mt-30 mb-10 px-10 ">
                 {faqs.map((faq, index) => (
                     <Accordion className="align-center" open={open === index} icon={<Icon id={index} open={open} />}>
                         <AccordionHeader onClick={() => handleOpen(index)} className="text-lg sm:text-2xl pl-5 cursor-pointer text-left">

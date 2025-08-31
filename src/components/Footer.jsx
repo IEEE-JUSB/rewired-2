@@ -13,16 +13,16 @@ function Footer() {
   return (
     <>
       <div className="text-red w-full mt-6 p-8 flex flex-col md:flex-row items-center md:items-start justify-center md:justify-around space-y-10 md:space-y-0" id="footer">
-        <div className="w-auto hidden sm:block">
+        {/* <div className="w-auto hidden sm:block">
           <div className="font-extrabold text-lg text-center">About JUSB</div>
           <div className="w-80">
             The Jadavpur University Student Branch, founded in 2010, belongs to the Kolkata section.
             We are a group of enthusiastic students promoting innovative ideas within and outside
             the campus.
           </div>
-        </div>
+        </div> */}
 
-        <div className="w-auto">
+        {/* <div className="w-auto">
           <div className="font-extrabold mb-2 pl-2 text-lg">Quick Links</div>
           <div className="text-center">
             <a href="/#about" className="hover:text-red-400 transition">
@@ -41,10 +41,10 @@ function Footer() {
               FAQ
             </a>
           </div>
-        </div>
+        </div> */}
 
         <div className="w-auto px-6 ">
-          <div className="font-extrabold mb-2 text-center text-lg">Contact Us</div>
+          <div className="font-extrabold mb-2 text-center text-xl">Contact Us</div>
           <div className="flex items-center gap-2">
             <FaEnvelope />
             <a href="mailto:jaduniv.ieee@gmail.com">jaduniv.ieee@gmail.com</a>
@@ -63,8 +63,8 @@ function Footer() {
         </div>
 
         <div className="w-auto ml-5 flex flex-col items-center">
-          <div className="font-extrabold mb-2 text-lg">Follow us on Socials</div>
-          <div className="flex gap-4 items-center text-2xl">
+          {/* <div className="font-extrabold mb-2 text-lg">Follow us on Socials</div> */}
+          <div className="flex md:flex-col gap-4 items-center text-2xl">
             <a
               href="https://www.instagram.com/_ieeeju/"
               target="_blank"
