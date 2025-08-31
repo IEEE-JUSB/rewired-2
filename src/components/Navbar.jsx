@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FaBars } from "react-icons/fa";
 import { FaXmark } from "react-icons/fa6";
-import { BrowserRouter } from "react-router-dom";
+import { Link } from "react-router-dom";
 import logo from "../assets/rewired_2_logo.png";
 
 function Navbar() {
@@ -29,9 +29,11 @@ function Navbar() {
 
 function LargeNavbar() {
   return (
-    <BrowserRouter>
+    <>
       <div>
-        <img src={logo} className="m-2 scale-70"></img>
+        <Link to="/">
+          <img src={logo} className="m-2 scale-70"></img>
+        </Link>
       </div>
       <nav className="justify-around items-center p-4 hidden md:flex">
         <ul className="flex gap-x-6 text-xl mr-2">
@@ -76,9 +78,17 @@ function LargeNavbar() {
               Contact Us
             </a>
           </li>
+          <li className="relative top-2">
+            <Link
+              to="/register"
+              className="text-red-700 hover:text-red hover:border-red border-b-4 pb-4 border-transparent"
+            >
+              Register
+            </Link>
+          </li>
         </ul>
       </nav>
-    </BrowserRouter>
+    </>
   );
 }
 
@@ -88,7 +98,9 @@ function SmallNavbar() {
   return (
     <div className="md:hidden flex justify-between items-center p-4 gap-x-12">
       <div>
-        <img src={logo} className="m-2 scale-65"></img>
+        <Link to="/">
+          <img src={logo} className="m-2 scale-65"></img>
+        </Link>
       </div>
       <div
         className="text-2xl"
@@ -99,42 +111,47 @@ function SmallNavbar() {
         <FaBars />
       </div>
 
-      <BrowserRouter>
-        <nav
-          className={`bg-[#54080880] transition-opacity duration-150 mobile-navbar backdrop-blur-md p-6 fixed flex-col items-center gap-y-12 top-4 right-4 left-4 bottom-4 rounded-lg ${
-            navOpen ? `flex` : `hidden opacity-0`
-          }`}
-        >
-          <button onClick={() => setNavOpen(false)} className="self-end text-3xl">
-            <FaXmark />
-          </button>
-          <div>
+      <nav
+        className={`bg-[#54080880] transition-opacity duration-150 mobile-navbar backdrop-blur-md p-6 fixed flex-col items-center gap-y-12 top-4 right-4 left-4 bottom-4 rounded-lg ${
+          navOpen ? `flex` : `hidden opacity-0`
+        }`}
+      >
+        <button onClick={() => setNavOpen(false)} className="self-end text-3xl">
+          <FaXmark />
+        </button>
+        <div>
+          <Link to="/">
             <img src={logo} className="m-2 scale-70"></img>
-          </div>
-          <ul className="flex flex-col gap-y-4 text-center text-xl font-medium">
-            <li>
-              <a href="/#about" onClick={() => setNavOpen(false)}>
-                ABOUT
-              </a>
-            </li>
-            <li>
-              <a href="/#timeline" onClick={() => setNavOpen(false)}>
-                TIMELINE
-              </a>
-            </li>
-            <li>
-              <a href="/#speakers" onClick={() => setNavOpen(false)}>
-                SPEAKERS
-              </a>
-            </li>
-            <li>
-              <a href="/#footer" onClick={() => setNavOpen(false)}>
-                CONTACT US
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </BrowserRouter>
+          </Link>
+        </div>
+        <ul className="flex flex-col gap-y-4 text-center text-xl font-medium">
+          <li>
+            <a href="/#about" onClick={() => setNavOpen(false)}>
+              ABOUT
+            </a>
+          </li>
+          <li>
+            <a href="/#timeline" onClick={() => setNavOpen(false)}>
+              TIMELINE
+            </a>
+          </li>
+          <li>
+            <a href="/#speakers" onClick={() => setNavOpen(false)}>
+              SPEAKERS
+            </a>
+          </li>
+          <li>
+            <a href="/#footer" onClick={() => setNavOpen(false)}>
+              CONTACT US
+            </a>
+          </li>
+          <li>
+            <Link to="/register" onClick={() => setNavOpen(false)}>
+              REGISTER
+            </Link>
+          </li>
+        </ul>
+      </nav>
     </div>
   );
 }
